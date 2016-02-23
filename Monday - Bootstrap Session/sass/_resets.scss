@@ -1,0 +1,45 @@
+/* Reset helpers */
+
+%reset-base {
+	margin: 0;
+	padding: 0;
+	height: auto;
+	width: auto;
+	min-width: 0;
+	max-width: none;
+	min-height: 0;
+	max-height: none;
+	line-height: normal;
+	float: none;
+	text-align: start;
+	vertical-align: baseline;
+}
+
+%reset-block {
+	@extend %reset-base;
+	display: block;
+}
+
+%reset-inline {
+	@extend %reset-base;
+	display: inline;
+}
+
+#suiteBar *, #s4-ribbonrow *, .ms-dlgContent * {
+	box-sizing: content-box;
+}
+
+#s4-titlerow, #titleAreaRow, #titleAreaBox, #titleAreaRow > div,
+#contentRow, #sideNavBox, #contentBox, #mainContent + div,
+.col-fluid-1, .col-fluid-2, .right-wp-zone-col, .ms-mpSearchBox, #searchInputBox {
+	@extend %reset-block;
+}
+
+.ms-siteicon-a {
+	@extend %reset-inline;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}

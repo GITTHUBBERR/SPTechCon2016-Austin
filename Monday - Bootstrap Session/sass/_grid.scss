@@ -1,0 +1,46 @@
+/* Grid / Layout settings */
+
+#titleAreaRow {
+	@extend .row;
+
+	> #siteIcon {
+		@extend .col-md-2;
+
+		.ms-siteicon-img {
+			@extend .img-responsive;
+		}
+	}
+
+	> #siteIcon + div {
+		@extend .col-md-7;
+	}
+
+	> #siteIcon + div + div {
+		@extend .col-md-3;
+	}
+}
+#contentRow {
+	@extend .row;
+
+	> #sideNavBox {
+		@extend .col-md-2;
+	}
+
+	> #contentBox {
+		@extend .col-md-10;
+	}
+}
+
+#mainContent + div {
+	@extend .row;
+
+	> .col-fluid-1 {
+		@extend .col-md-9;
+		margin: 0 -23px;
+	}
+
+	> .right-wp-zone-col {
+		@extend .col-md-3;
+		@extend .hidden-xs;
+	}
+}
